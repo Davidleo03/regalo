@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Feliz San Valentín</title>
+    <title>Feliz Día del Amor y la Amistad</title>
     <style>
         body {
             margin: 0;
@@ -12,29 +12,33 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            background-color: #ffebee;
-            font-family: Arial, sans-serif;
+            background-color: #ff9ff3; /* Nuevo color de fondo */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             overflow: hidden;
         }
         .container {
             text-align: center;
             z-index: 1;
-            background-color: rgba(255, 255, 255, 0.8);
-            padding: 2rem;
-            border-radius: 15px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 3rem;
+            border-radius: 25px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+            max-width: 80%;
+            backdrop-filter: blur(5px);
+            border: 2px solid #fff;
         }
         h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
-            color: #e91e63;
+            margin-bottom: 1.5rem;
+            color: #ff4757;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
         }
         p {
             font-size: 1.2rem;
-            line-height: 1.6;
+            line-height: 1.8;
             max-width: 600px;
             margin: 0 auto;
-            color: #333;
+            color: #2f3542;
         }
         .heart {
             position: fixed;
@@ -44,15 +48,18 @@
         }
         @keyframes float {
             0% {
-                transform: translateY(100vh);
+                transform: translateY(100vh) rotate(0deg);
                 opacity: 1;
             }
             100% {
-                transform: translateY(-100vh);
+                transform: translateY(-100vh) rotate(360deg);
                 opacity: 0;
             }
         }
         @media (max-width: 600px) {
+            .container {
+                padding: 2rem;
+            }
             h1 {
                 font-size: 2rem;
             }
@@ -64,12 +71,12 @@
 </head>
 <body>
     <div class="container">
-        <h1>Te amo Mi Ari Hermosa</h1>
+        <h1>Feliz día Señorita Katherine</h1>
         <p>
-            En este día de San Valentín, quiero recordarte cuánto significas para mí. 
-            Eres la luz que ilumina mis días, la sonrisa que alegra mi corazón y el amor 
-            que da sentido a mi vida. Cada momento contigo es un regalo, y estoy 
-            agradecido por tenerte a mi lado. Te amo más de lo que las palabras pueden expresar.
+            En este día del Amor y la Amistad, quiero celebrar la hermosa conexión que compartimos. 
+            Tu amistad es un tesoro que ilumina mis días y tu presencia en mi vida es un regalo invaluable. 
+            Que este día esté lleno de alegría, cariño y momentos especiales. 
+            Feliz San Valentin!
         </p>
     </div>
 
@@ -80,9 +87,8 @@
             heart.style.left = `${Math.random() * 100}vw`;
             heart.style.animationDuration = `${Math.random() * 2 + 3}s`;
             
-            // Seleccionar aleatoriamente entre corazones rojos, azules y rosados
-            const colors = ['❤️', '💙', '💗'];
-            heart.innerText = colors[Math.floor(Math.random() * colors.length)];
+            const hearts = ['❤️', '💙', '💗', '💖', '💘', '💝', '💕', '💓', '💞', '💟'];
+            heart.innerText = hearts[Math.floor(Math.random() * hearts.length)];
             
             document.body.appendChild(heart);
 
@@ -91,7 +97,7 @@
             }, 5000);
         }
 
-        setInterval(createHeart, 300);
+        setInterval(createHeart, 200);
     </script>
 </body>
 </html>
